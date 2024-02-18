@@ -8,7 +8,9 @@ use std::net::TcpListener;
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
     // telemetry
-    let subscriber = get_subscriber("zero2prod".into(), "info".into());
+    let subscriber = get_subscriber(
+        "zero2prod".into(), "info".into(), std::io::stdout
+    );
     init_subscriber(subscriber);
 
     // database and server configs
