@@ -7,6 +7,7 @@ use std::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
+
     // telemetry
     let subscriber = get_subscriber(
         "zero2prod".into(), "info".into(), std::io::stdout
